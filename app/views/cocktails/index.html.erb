@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-md-3 col-sm-6">
+      <div class="card card-new">
+        <div>
+          <%= link_to new_cocktail_path do %>
+          <i class='fa fa-plus-square-o'></i>
+        <% end %>
+        </div>
+      </div>
+    </div>
+    <% @cocktails.reverse.each do |cocktail| %>
+      <div class="col-lg-4 col-md-3 col-sm-6">
+        <div class="card card-cocktail">
+          <%= link_to cocktail_path(cocktail) do %>
+            <%= cocktail.name %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

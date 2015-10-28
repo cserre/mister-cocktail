@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3">
+        <div class="card">
+          <div class="text-center">
+            <h3>Tell us about your cocktail</h3>
+          </div>
+          <div>
+            <%= simple_form_for(@cocktail) do |f| %>
+              <%= f.error_notification %>
+
+              <%= f.input :name %>
+
+              <%= f.button :submit, class: 'btn btn-primary' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

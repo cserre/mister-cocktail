@@ -1,0 +1,23 @@
+.card {
+  margin: 20px;
+  padding: 10px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  border-radius: 3px;
+
+  &-new {
+    align-items: center;
+    background-color: #EF709D;
+    a {
+      font-size: 30px;
+      color: white;
+      &:hover {
+        color: #EA3788;
+      }
+    }
+  }
+  &-cocktail {
+
+  }
+}
