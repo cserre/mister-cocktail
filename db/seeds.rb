@@ -1,7 +1,16 @@
-Ingredient.create(name: "lemon")
+Ingredient.create(name: "lime")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 Ingredient.create(name: "rhum")
 Ingredient.create(name: "gin")
 Ingredient.create(name: "sugar cane")
 Ingredient.create(name: "orange juice")
+
+Cocktail.create(name: "Tequila sunrise")
+Cocktail.create(name: "Mojito")
+Cocktail.create(name: "Punch")
+
+Dose.create(description: "2cl de rhum", cocktail_id: 2, ingredient_id: 4)
+Dose.create(description: "5 ou 6 feuilles de menthe", cocktail_id: 2, ingredient_id: 3)
+Dose.create(description: "un peu de citron vert", cocktail_id: 2, ingredient_id: 1)
+Dose.create(description: "et du sucre de canne liquide", cocktail_id: 2, ingredient_id: 6)

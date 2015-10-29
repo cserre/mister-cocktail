@@ -5,9 +5,9 @@
   display: flex;
   justify-content: center;
   border-radius: 3px;
+  align-items: center;
 
   &-new {
-    align-items: center;
     background-color: #EF709D;
     a {
       font-size: 30px;
@@ -18,6 +18,9 @@
     }
   }
   &-cocktail {
-
+    border: 1px solid #EF709D;
   }
+}
+.color-pink {
+  color: #EA3788;
 }

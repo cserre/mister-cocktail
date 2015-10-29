@@ -1,0 +1,14 @@
+<div class="card">
+  <div>
+    <%= simple_form_for([@cocktail, @dose]) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error :ingredient, :id => "Ingredient already chosen" %>
+
+      <%= f.input :description %>
+      <%= f.association :ingredient, :collection => Ingredient.all, error: 'ergege' %>
+      <%= f.hidden_field :cocktail_id, :value => @cocktail.id %>
+
+      <%= f.button :submit, class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>

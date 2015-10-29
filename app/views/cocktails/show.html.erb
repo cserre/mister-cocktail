@@ -1,1 +1,32 @@
-<h1>Mon cocktail</h1>
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <h3><%= @cocktail.name %></h3>
+      </div>
+      <div class="col-md-5 col-md-offset-1">
+        <div class="card card-cocktail"></div>
+      </div>
+      <div class="col-md-5">
+        <div class="row">
+          <div class="card">
+            <ul>
+              <% if @cocktail.doses.any? %>
+                <% @cocktail.doses.each do |dose| %>
+                  <li><%= dose.ingredient.name %> - <%= dose.description %> <%= link_to ("<i class='fa fa-trash color-pink'></i>").html_safe, cocktail_dose_path(@cocktail, dose), method: :delete %>
+                    <!-- change to dose_path(dose) for rake ok -->
+                  </li>
+                <% end %>
+              <% end %>
+              <li>
+                <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <%= render 'doses/new' %>
+        </div>
+
+      </div>
+  </div>
+</div>
