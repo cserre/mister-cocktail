@@ -1,14 +1,14 @@
-<div class="card">
+<div class="card card-doses hidden" id="dose-form">
   <div>
     <%= simple_form_for([@cocktail, @dose]) do |f| %>
       <%= f.error_notification %>
       <%= f.error :ingredient, :id => "Ingredient already chosen" %>
 
-      <%= f.input :description %>
-      <%= f.association :ingredient, :collection => Ingredient.all, error: 'ergege' %>
+      <%= f.input :description, label: 'Quantity' %>
+      <%= f.association :ingredient, :collection => Ingredient.all %>
       <%= f.hidden_field :cocktail_id, :value => @cocktail.id %>
 
-      <%= f.button :submit, class: 'btn btn-primary' %>
+      <%= f.button :submit, class: 'btn btn-primary', value: 'Add' %>
     <% end %>
   </div>
 </div>
